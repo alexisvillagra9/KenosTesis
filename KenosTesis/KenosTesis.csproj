@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E81AA9E1-39E2-4879-B707-A948434E8D4F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KenosTesis</RootNamespace>
+    <AssemblyName>KenosTesis</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuscarGrupoFamiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarGrupoFamiliar.Designer.cs">
+      <DependentUpon>BuscarGrupoFamiliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarSociosSGF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarSociosSGF.Designer.cs">
+      <DependentUpon>BuscarSociosSGF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripcion.Designer.cs">
+      <DependentUpon>Inscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet10.cs">
+      <DependentUpon>pilarSportClubDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet15.cs">
+      <DependentUpon>pilarSportClubDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarCategoria.Designer.cs">
+      <DependentUpon>RegistrarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarClienteAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarClienteAlquiler.Designer.cs">
+      <DependentUpon>RegistrarClienteAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarDeportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarDeportes.Designer.cs">
+      <DependentUpon>RegistrarDeportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarProfesor.Designer.cs">
+      <DependentUpon>RegistrarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraerSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraerSocio.Designer.cs">
+      <DependentUpon>TraerSocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImprimirFormularios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImprimirFormularios.Designer.cs">
+      <DependentUpon>ImprimirFormularios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarGrupoFamiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarGrupoFamiliar.Designer.cs">
+      <DependentUpon>ModificarGrupoFamiliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarSocio.Designer.cs">
+      <DependentUpon>ModificarSocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoSocio.Designer.cs">
+      <DependentUpon>NuevoSocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarGrupoFamiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarGrupoFamiliar.Designer.cs">
+      <DependentUpon>RegistrarGrupoFamiliar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BuscarGrupoFamiliar.resx">
+      <DependentUpon>BuscarGrupoFamiliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarSociosSGF.resx">
+      <DependentUpon>BuscarSociosSGF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripcion.resx">
+      <DependentUpon>Inscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarCategoria.resx">
+      <DependentUpon>RegistrarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarClienteAlquiler.resx">
+      <DependentUpon>RegistrarClienteAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarDeportes.resx">
+      <DependentUpon>RegistrarDeportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarProfesor.resx">
+      <DependentUpon>RegistrarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraerSocio.resx">
+      <DependentUpon>TraerSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimirFormularios.resx">
+      <DependentUpon>ImprimirFormularios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarGrupoFamiliar.resx">
+      <DependentUpon>ModificarGrupoFamiliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarSocio.resx">
+      <DependentUpon>ModificarSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoSocio.resx">
+      <DependentUpon>NuevoSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegistrarGrupoFamiliar.resx">
+      <DependentUpon>RegistrarGrupoFamiliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="fomularios\inscripcion.pdf" />
+    <None Include="pilarSportClubDataSet.xsc">
+      <DependentUpon>pilarSportClubDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet.xss">
+      <DependentUpon>pilarSportClubDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet1.xsc">
+      <DependentUpon>pilarSportClubDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet1.xss">
+      <DependentUpon>pilarSportClubDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet10.xsc">
+      <DependentUpon>pilarSportClubDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet10.xss">
+      <DependentUpon>pilarSportClubDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet11.xsc">
+      <DependentUpon>pilarSportClubDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet11.xss">
+      <DependentUpon>pilarSportClubDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet12.xsc">
+      <DependentUpon>pilarSportClubDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet12.xss">
+      <DependentUpon>pilarSportClubDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet13.xsc">
+      <DependentUpon>pilarSportClubDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet13.xss">
+      <DependentUpon>pilarSportClubDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet14.xsc">
+      <DependentUpon>pilarSportClubDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet14.xss">
+      <DependentUpon>pilarSportClubDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet15.xsc">
+      <DependentUpon>pilarSportClubDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet15.xss">
+      <DependentUpon>pilarSportClubDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet16.xsc">
+      <DependentUpon>pilarSportClubDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet16.xss">
+      <DependentUpon>pilarSportClubDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet17.xsc">
+      <DependentUpon>pilarSportClubDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet17.xss">
+      <DependentUpon>pilarSportClubDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet18.xsc">
+      <DependentUpon>pilarSportClubDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet18.xss">
+      <DependentUpon>pilarSportClubDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet19.xsc">
+      <DependentUpon>pilarSportClubDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet19.xss">
+      <DependentUpon>pilarSportClubDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet2.xsc">
+      <DependentUpon>pilarSportClubDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet2.xss">
+      <DependentUpon>pilarSportClubDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet20.xsc">
+      <DependentUpon>pilarSportClubDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet20.xss">
+      <DependentUpon>pilarSportClubDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet21.xsc">
+      <DependentUpon>pilarSportClubDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet21.xss">
+      <DependentUpon>pilarSportClubDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet3.xsc">
+      <DependentUpon>pilarSportClubDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet3.xss">
+      <DependentUpon>pilarSportClubDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet4.xsc">
+      <DependentUpon>pilarSportClubDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet4.xss">
+      <DependentUpon>pilarSportClubDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet5.xsc">
+      <DependentUpon>pilarSportClubDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet5.xss">
+      <DependentUpon>pilarSportClubDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet6.xsc">
+      <DependentUpon>pilarSportClubDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet6.xss">
+      <DependentUpon>pilarSportClubDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet7.xsc">
+      <DependentUpon>pilarSportClubDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet7.xss">
+      <DependentUpon>pilarSportClubDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet8.xsc">
+      <DependentUpon>pilarSportClubDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet8.xss">
+      <DependentUpon>pilarSportClubDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet9.xsc">
+      <DependentUpon>pilarSportClubDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet9.xss">
+      <DependentUpon>pilarSportClubDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="iconos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="pilarSportClubDataSet20" targetNamespace="http://tempuri.org/pilarSportClubDataSet20.xsd" xmlns:mstns="http://tempuri.org/pilarSportClubDataSet20.xsd" xmlns="http://tempuri.org/pilarSportClubDataSet20.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="pilarSportClubConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="pilarSportClubConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KenosTesis.Properties.Settings.GlobalReference.Default.pilarSportClubConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="buscarCATableAdapter" GeneratorDataComponentClassName="buscarCATableAdapter" Name="buscarCA" UserDataComponentName="buscarCATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="pilarSportClubConnectionString (Settings)" DbObjectName="pilarSportClub.dbo.buscarCA" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idClienteAlq, nombreClienteAlq, apellidoClienteAlq, dni FROM dbo.buscarCA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idClienteAlq" DataSetColumn="idClienteAlq" />
+              <Mapping SourceColumn="nombreClienteAlq" DataSetColumn="nombreClienteAlq" />
+              <Mapping SourceColumn="apellidoClienteAlq" DataSetColumn="apellidoClienteAlq" />
+              <Mapping SourceColumn="dni" DataSetColumn="dni" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="pilarSportClubDataSet20" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="pilarSportClubDataSet20" msprop:Generator_UserDSName="pilarSportClubDataSet20">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="buscarCA" msprop:Generator_TableClassName="buscarCADataTable" msprop:Generator_TableVarName="tablebuscarCA" msprop:Generator_TablePropName="buscarCA" msprop:Generator_RowDeletingName="buscarCARowDeleting" msprop:Generator_RowChangingName="buscarCARowChanging" msprop:Generator_RowEvHandlerName="buscarCARowChangeEventHandler" msprop:Generator_RowDeletedName="buscarCARowDeleted" msprop:Generator_UserTableName="buscarCA" msprop:Generator_RowChangedName="buscarCARowChanged" msprop:Generator_RowEvArgName="buscarCARowChangeEvent" msprop:Generator_RowClassName="buscarCARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idClienteAlq" msprop:Generator_ColumnVarNameInTable="columnidClienteAlq" msprop:Generator_ColumnPropNameInRow="idClienteAlq" msprop:Generator_ColumnPropNameInTable="idClienteAlqColumn" msprop:Generator_UserColumnName="idClienteAlq" type="xs:int" />
+              <xs:element name="nombreClienteAlq" msprop:Generator_ColumnVarNameInTable="columnnombreClienteAlq" msprop:Generator_ColumnPropNameInRow="nombreClienteAlq" msprop:Generator_ColumnPropNameInTable="nombreClienteAlqColumn" msprop:Generator_UserColumnName="nombreClienteAlq" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apellidoClienteAlq" msprop:Generator_ColumnVarNameInTable="columnapellidoClienteAlq" msprop:Generator_ColumnPropNameInRow="apellidoClienteAlq" msprop:Generator_ColumnPropNameInTable="apellidoClienteAlqColumn" msprop:Generator_UserColumnName="apellidoClienteAlq" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dni" msprop:Generator_ColumnVarNameInTable="columndni" msprop:Generator_ColumnPropNameInRow="dni" msprop:Generator_ColumnPropNameInTable="dniColumn" msprop:Generator_UserColumnName="dni" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:buscarCA" />
+      <xs:field xpath="mstns:idClienteAlq" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
