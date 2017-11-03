@@ -32,10 +32,14 @@ namespace KenosTesis
 
         private void RegistrarClienteAlquiler_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet23.buscarCA' Puede moverla o quitarla según sea necesario.
+            this.buscarCATableAdapter.Fill(this.pilarSportClubDataSet23.buscarCA);
+            // TODO: esta línea de código carga datos en la tabla 'dSsexo.sexo' Puede moverla o quitarla según sea necesario.
+            this.sexoTableAdapter.Fill(this.dSsexo.sexo);
             // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet21.sexo' Puede moverla o quitarla según sea necesario.
-            this.sexoTableAdapter.Fill(this.pilarSportClubDataSet21.sexo);
+            //this.sexoTableAdapter.Fill(this.pilarSportClubDataSet21.sexo);
             // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet20.buscarCA' Puede moverla o quitarla según sea necesario.
-            this.buscarCATableAdapter.Fill(this.pilarSportClubDataSet20.buscarCA);
+            //this.buscarCATableAdapter.Fill(this.pilarSportClubDataSet20.buscarCA);
 
 
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -104,7 +108,7 @@ namespace KenosTesis
             {
                 dataGridView1.Rows[i].Cells[0].Value = false;
             }
-            dataGridView1.Rows[columna].Cells[fila].Value = true;
+            dataGridView1.Rows[columna].Cells[0].Value = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -228,7 +232,7 @@ namespace KenosTesis
         {
             if (estBoton == "Guardar")
             {
-                SqlCommand modifica = new SqlCommand("update clienteAlquiler set nombreClienteAlq=@nom, apellidoClienteAlqr=@ape, fechaNacimiento=@fec, localidad=@loc, telefono=@tel, dni=@dni, sexo=@sex, direccion=@dir where idClienteAlq=@id", conexion);
+                SqlCommand modifica = new SqlCommand("update clienteAlquiler set nombreClienteAlq=@nom, apellidoClienteAlq=@ape, fechaNacimiento=@fec, localidad=@loc, telefono=@tel, dni=@dni, sexo=@sex, direccion=@dir where idClienteAlq=@id", conexion);
                 adaptador.UpdateCommand = modifica;
                 adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@nom", SqlDbType.VarChar, 50));
                 adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@ape", SqlDbType.VarChar, 50));
@@ -311,7 +315,7 @@ namespace KenosTesis
         public String consultaID()
         {
             DataSet datoObj1;
-            SqlCommand consulta = new SqlCommand("select idClienteAlq from dbo.profesor where dni=@doc", conexion);
+            SqlCommand consulta = new SqlCommand("select idClienteAlq from clienteAlquiler where dni=@doc", conexion);
             adaptador.SelectCommand = consulta;
             adaptador.SelectCommand.Parameters.Add(new SqlParameter("@doc", SqlDbType.VarChar));
             datoObj1 = new DataSet();

@@ -24,9 +24,11 @@ namespace KenosTesis
         public DataSet datoObj;
         public DataTable datos;
         public DataTable datos1;
+        public DataTable datos2;
 
         private void ModificarGrupoFamiliar_Load(object sender, EventArgs e)
         {
+            
             // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet8.socio' Puede moverla o quitarla según sea necesario.
             this.socioTableAdapter.Fill(this.pilarSportClubDataSet8.socio);
             this.MaximizeBox = false;
@@ -37,11 +39,26 @@ namespace KenosTesis
 
 
             //Procedimiento Almacenado Para Buscar
-            
 
+            if (idSocioNuevo.Text != "INICIAL")
+            {
+                consultarDatosSocioNuevo();
+            }
             inicializar();
         }
 
+        public void consultarDatosSocioNuevo()
+        {
+            SqlCommand consulta = new SqlCommand("select * from socio where idSocio = @idso", conexion);
+            adaptador.SelectCommand = consulta;
+            adaptador.SelectCommand.Parameters.Add(new SqlParameter("@idso", SqlDbType.Int));
+            datos2 = new DataTable();
+            conexion.Open();
+            adaptador.SelectCommand.Parameters["@idso"].Value = int.Parse(idSocioNuevo.Text);
+            adaptador.Fill(datos2);
+            dataGridView1.DataSource = datos2.DefaultView.ToTable(true, "idSocio", "nombreSocio", "apellidoSocio", "estado");
+            conexion.Close();
+        }
         public void superConsulta(int id)
         {
             SqlCommand consulta = new SqlCommand("select * from socio where socio.grupoFam = (select socio.grupoFam from socio where socio.idSocio = @idso)", conexion);
@@ -51,12 +68,26 @@ namespace KenosTesis
             conexion.Open();
             adaptador.SelectCommand.Parameters["@idso"].Value = id;
             adaptador.Fill(datos1);
-            dataGridView1.DataSource = datos1.DefaultView.ToTable(true, "idSocio", "nombreSocio", "apellidoSocio", "estado");
             conexion.Close();
             label5.Text = datos1.Rows[0][10].ToString();
             button2.Visible = true;
             label4.Enabled = true;
             label5.Enabled = true;
+            if (idSocioNuevo.Text != "INICIAL")
+            {
+                //datos1.DefaultView.ToTable(true, "idSocio", "nombreSocio", "apellidoSocio", "estado");
+                datos2.Merge(datos1);
+                dataGridView1.DataSource = datos2.DefaultView.ToTable(true, "idSocio", "nombreSocio", "apellidoSocio", "estado");
+                agregaSocio(int.Parse(idSocioNuevo.Text));
+                idSocioNuevo.Text = "INICIAL";
+            }
+            else
+            {
+                dataGridView1.DataSource = datos1.DefaultView.ToTable(true, "idSocio", "nombreSocio", "apellidoSocio", "estado");
+            }
+            
+            
+           
 
         }
 
@@ -69,7 +100,7 @@ namespace KenosTesis
             conexion.Open();
             adaptador.SelectCommand.Parameters["@gf"].Value = id;
             adaptador.Fill(datos1);
-            dataGridView1.DataSource = datos1.DefaultView.ToTable(true, "idSocio", "nombreSocio", "apellidoSocio", "estado"); ;
+            //dataGridView1.DataSource = datos1.DefaultView.ToTable(true, "idSocio", "nombreSocio", "apellidoSocio", "estado"); ;
             conexion.Close();
             if (datos1.Rows.Count == 0)
             {
@@ -82,6 +113,18 @@ namespace KenosTesis
                 button2.Visible = true;
                 label4.Enabled = true;
                 label5.Enabled = true;
+            }
+            if (idSocioNuevo.Text != "INICIAL")
+            {
+                //datos1.DefaultView.ToTable(true, "idSocio", "nombreSocio", "apellidoSocio", "estado");
+                datos2.Merge(datos1);
+                dataGridView1.DataSource = datos2.DefaultView.ToTable(true, "idSocio", "nombreSocio", "apellidoSocio", "estado");
+                
+                agregaSocio(int.Parse(idSocioNuevo.Text));
+            }
+            else
+            {
+                dataGridView1.DataSource = datos1.DefaultView.ToTable(true, "idSocio", "nombreSocio", "apellidoSocio", "estado");
             }
 
 
@@ -267,6 +310,7 @@ namespace KenosTesis
             adaptador.UpdateCommand.Parameters["@idgf"].Value = int.Parse(label5.Text);
             adaptador.UpdateCommand.ExecuteNonQuery();
             conexion.Close();
+            idSocioNuevo.Text = "INICIAL";
             superConsulta2(int.Parse(label5.Text));
         }
     }

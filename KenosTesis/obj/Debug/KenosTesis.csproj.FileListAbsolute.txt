@@ -83,3 +83,4 @@ D:\Visual Studio 2015\Projects\KenosTesis\KenosTesis\obj\Debug\KenosTesis.Regist
 D:\Visual Studio 2015\Projects\KenosTesis\KenosTesis\obj\Debug\KenosTesis.RegistrarProfesor.resources
 D:\Visual Studio 2015\Projects\KenosTesis\KenosTesis\obj\Debug\KenosTesis.RegistrarCategoria.resources
 D:\Visual Studio 2015\Projects\KenosTesis\KenosTesis\obj\Debug\KenosTesis.RegistrarClienteAlquiler.resources
+D:\Visual Studio 2015\Projects\KenosTesis\KenosTesis\obj\Debug\KenosTesis.InformesEstadisticos.resources

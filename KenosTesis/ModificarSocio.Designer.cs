@@ -761,8 +761,6 @@
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label ngrupo;
-        private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -802,5 +800,7 @@
         public System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button2;
         private pilarSportClubDataSet11TableAdapters.sexoTableAdapter sexoTableAdapter1;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label ngrupo;
     }
 }

@@ -31,11 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TraerSocio));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.seleccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.idSocioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreSocioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoSocioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buscarPorTodoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.pilarSportClubDataSet5 = new KenosTesis.pilarSportClubDataSet5();
             this.buscarPorTodoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -50,6 +45,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.seleccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idSocioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreSocioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoSocioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buscarPorTodoBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet5)).BeginInit();
@@ -62,6 +62,8 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -73,42 +75,11 @@
             this.dataGridView1.DataSource = this.buscarPorTodoBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(24, 59);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(391, 157);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // seleccion
-            // 
-            this.seleccion.HeaderText = "seleccion";
-            this.seleccion.Name = "seleccion";
-            this.seleccion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.seleccion.Width = 30;
-            // 
-            // idSocioDataGridViewTextBoxColumn
-            // 
-            this.idSocioDataGridViewTextBoxColumn.DataPropertyName = "idSocio";
-            this.idSocioDataGridViewTextBoxColumn.HeaderText = "idSocio";
-            this.idSocioDataGridViewTextBoxColumn.Name = "idSocioDataGridViewTextBoxColumn";
-            this.idSocioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreSocioDataGridViewTextBoxColumn
-            // 
-            this.nombreSocioDataGridViewTextBoxColumn.DataPropertyName = "nombreSocio";
-            this.nombreSocioDataGridViewTextBoxColumn.HeaderText = "nombreSocio";
-            this.nombreSocioDataGridViewTextBoxColumn.Name = "nombreSocioDataGridViewTextBoxColumn";
-            // 
-            // apellidoSocioDataGridViewTextBoxColumn
-            // 
-            this.apellidoSocioDataGridViewTextBoxColumn.DataPropertyName = "apellidoSocio";
-            this.apellidoSocioDataGridViewTextBoxColumn.HeaderText = "apellidoSocio";
-            this.apellidoSocioDataGridViewTextBoxColumn.Name = "apellidoSocioDataGridViewTextBoxColumn";
-            // 
-            // dniDataGridViewTextBoxColumn
-            // 
-            this.dniDataGridViewTextBoxColumn.DataPropertyName = "dni";
-            this.dniDataGridViewTextBoxColumn.HeaderText = "dni";
-            this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
             // 
             // buscarPorTodoBindingSource2
             // 
@@ -195,6 +166,43 @@
             this.textBox3.TabIndex = 5;
             this.textBox3.Visible = false;
             // 
+            // seleccion
+            // 
+            this.seleccion.HeaderText = "";
+            this.seleccion.Name = "seleccion";
+            this.seleccion.ReadOnly = true;
+            this.seleccion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.seleccion.Width = 20;
+            // 
+            // idSocioDataGridViewTextBoxColumn
+            // 
+            this.idSocioDataGridViewTextBoxColumn.DataPropertyName = "idSocio";
+            this.idSocioDataGridViewTextBoxColumn.HeaderText = "Nº Socio";
+            this.idSocioDataGridViewTextBoxColumn.Name = "idSocioDataGridViewTextBoxColumn";
+            this.idSocioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idSocioDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // nombreSocioDataGridViewTextBoxColumn
+            // 
+            this.nombreSocioDataGridViewTextBoxColumn.DataPropertyName = "nombreSocio";
+            this.nombreSocioDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreSocioDataGridViewTextBoxColumn.Name = "nombreSocioDataGridViewTextBoxColumn";
+            this.nombreSocioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellidoSocioDataGridViewTextBoxColumn
+            // 
+            this.apellidoSocioDataGridViewTextBoxColumn.DataPropertyName = "apellidoSocio";
+            this.apellidoSocioDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.apellidoSocioDataGridViewTextBoxColumn.Name = "apellidoSocioDataGridViewTextBoxColumn";
+            this.apellidoSocioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dniDataGridViewTextBoxColumn
+            // 
+            this.dniDataGridViewTextBoxColumn.DataPropertyName = "dni";
+            this.dniDataGridViewTextBoxColumn.HeaderText = "DNI";
+            this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
+            this.dniDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // TraerSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,13 +245,13 @@
         private pilarSportClubDataSet5 pilarSportClubDataSet5;
         private System.Windows.Forms.BindingSource buscarPorTodoBindingSource2;
         private pilarSportClubDataSet5TableAdapters.buscarPorTodoTableAdapter buscarPorTodoTableAdapter2;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn seleccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn idSocioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreSocioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoSocioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox3;
     }
 }

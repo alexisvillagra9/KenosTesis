@@ -21,8 +21,10 @@ namespace KenosTesis
 
         private void Inscripcion_Load(object sender, EventArgs e)
         {
-            String path = "C:/Users/Usuario/Documents/Visual Studio 2015/Projects/KenosTesis/KenosTesis/fomularios/"+this.Text+".pdf";
+            String path = "D:/Visual Studio 2015/Projects/KenosTesis/KenosTesis/fomularios/" + this.Text+".pdf";
             axAcroPDF1.LoadFile(path);
         }
+
+       
     }
 }

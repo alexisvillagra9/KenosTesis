@@ -23,7 +23,7 @@ namespace KenosTesis
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int fila = dataGridView1.CurrentCellAddress.X;
+            int fila = dataGridView1.CurrentCellAddress.Y;
             ModificarGrupoFamiliar modgf = Owner as ModificarGrupoFamiliar;
             modgf.superConsulta(int.Parse(dataGridView1.Rows[fila].Cells[1].Value.ToString()));
             this.Close();

@@ -101,6 +101,7 @@ namespace KenosTesis
             traeTelefono(datoObj.Tables[0].Rows[0][6].ToString());
             textBox1.Text = datoObj.Tables[0].Rows[0][11].ToString();
             conexion.Close();
+
         }
 
         public void traeTelefono(String telefono)
@@ -223,6 +224,8 @@ namespace KenosTesis
 
         private void button10_Click(object sender, EventArgs e)
         {
+            estadoSocio.Text = "- - - - - -";
+            ngrupo.Text = "- - -";
             nsocio.Text ="";
             ndni.Text = "";
             apellido.Text = "";
@@ -233,6 +236,19 @@ namespace KenosTesis
             textBox1.Text = "";
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedItem = "Pilar";
+            textBox1.Enabled = false;
+            panel1.Enabled = false;
+            panel2.Enabled = false;
+            panel3.Enabled = false;
+            nsocio.Enabled= true;
+            ndni.Enabled = true;
+            apellido.Enabled = true;
+            button9.Visible = false;
+            button2.Visible = true;
+            button1.Visible = true;
+            button2.Enabled = false;
+            button1.Enabled = false;
+
 
         }
 

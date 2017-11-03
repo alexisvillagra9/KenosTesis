@@ -65,7 +65,7 @@ namespace KenosTesis
             ModificarGrupoFamiliar ms = Owner as ModificarGrupoFamiliar;
 
 
-            int fila = dataGridView1.CurrentCellAddress.X;
+            int fila = dataGridView1.CurrentCellAddress.Y;
             ms.agregaSocio(int.Parse(dataGridView1.Rows[fila].Cells[1].Value.ToString()));
             this.Close();
             ms.Show();

@@ -209,8 +209,11 @@ namespace KenosTesis
                 {
                     ModificarGrupoFamiliar mgf = new ModificarGrupoFamiliar();
                     //mgf.idSocio = consultaID();
-                    mgf.Show();
-                    this.Close();
+                    AddOwnedForm(mgf);
+                    mgf.idSocioNuevo.Text = consultaID();
+                    mgf.ShowDialog();
+                    
+                    //this.Close();
                     //
                     // MessageBox.Show("ACA ABRE EL GRUPO FAMILIAR", "Alerta", MessageBoxButtons.OK);
                 }

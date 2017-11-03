@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Seleccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@
             this.pilarSportClubDataSet8 = new KenosTesis.pilarSportClubDataSet8();
             this.socioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.socioTableAdapter = new KenosTesis.pilarSportClubDataSet8TableAdapters.socioTableAdapter();
-            this.Seleccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idSocioNuevo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -158,6 +159,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(483, 195);
             this.dataGridView1.TabIndex = 3;
             // 
+            // Seleccion
+            // 
+            this.Seleccion.HeaderText = "Seleccio";
+            this.Seleccion.Name = "Seleccion";
+            this.Seleccion.ReadOnly = true;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(300, 123);
@@ -251,17 +258,20 @@
             // 
             this.socioTableAdapter.ClearBeforeFill = true;
             // 
-            // Seleccion
+            // idSocioNuevo
             // 
-            this.Seleccion.HeaderText = "Seleccio";
-            this.Seleccion.Name = "Seleccion";
-            this.Seleccion.ReadOnly = true;
+            this.idSocioNuevo.Location = new System.Drawing.Point(100, 107);
+            this.idSocioNuevo.Name = "idSocioNuevo";
+            this.idSocioNuevo.Size = new System.Drawing.Size(1, 20);
+            this.idSocioNuevo.TabIndex = 12;
+            this.idSocioNuevo.Text = "INICIAL";
             // 
             // ModificarGrupoFamiliar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 492);
+            this.Controls.Add(this.idSocioNuevo);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button3);
@@ -313,5 +323,6 @@
         private pilarSportClubDataSet8TableAdapters.socioTableAdapter socioTableAdapter;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccion;
         public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.TextBox idSocioNuevo;
     }
 }

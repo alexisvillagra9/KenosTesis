@@ -45,6 +45,14 @@ namespace KenosTesis
                         conexion.Close();
                         ms.Rellenar (int.Parse(ms.nsocio.Text)) ;
                         ms.bloquearCampos();
+                        if(ms.ngrupo.Text.Equals("No tiene"))
+                        {
+                            ms.button1.Visible = false;
+                        }
+                        else
+                        {
+                            ms.button1.Visible = true;
+                        }
                         ms.button9.Visible = true;
                         //ms.pintarBloqueados();
                         ms.Show();
@@ -88,7 +96,7 @@ namespace KenosTesis
             {
                 dataGridView1.Rows[i].Cells[0].Value = false;
             }
-            dataGridView1.Rows[columna].Cells[fila].Value = true;
+           dataGridView1.Rows[columna].Cells[0].Value = true;
         }
         
     }

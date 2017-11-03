@@ -119,5 +119,11 @@ namespace KenosTesis
             RegistrarClienteAlquiler ca = new RegistrarClienteAlquiler();
             ca.ShowDialog();
         }
+
+        private void informesEstadisticosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InformesEstadisticos ie = new InformesEstadisticos();
+            ie.ShowDialog();
+        }
     }
 }

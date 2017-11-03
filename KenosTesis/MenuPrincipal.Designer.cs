@@ -55,16 +55,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informesEstadisticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -79,7 +81,8 @@
             this.archivoToolStripMenuItem,
             this.socioToolStripMenuItem,
             this.grupoFamiliarToolStripMenuItem,
-            this.herramientasToolStripMenuItem});
+            this.herramientasToolStripMenuItem,
+            this.informesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
@@ -328,6 +331,53 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Deportes";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(222, 31);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(57, 13);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Categorias";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(203, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Cargar/Modificar";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(129, 31);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(46, 13);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Profesor";
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.Location = new System.Drawing.Point(214, 44);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(60, 60);
+            this.button8.TabIndex = 1;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(39, 31);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Deporte";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -347,26 +397,6 @@
             this.button7.TabIndex = 1;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(203, 19);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Cargar/Modificar";
-            // 
-            // button8
-            // 
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button8.Location = new System.Drawing.Point(214, 44);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(60, 60);
-            this.button8.TabIndex = 1;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // groupBox7
             // 
@@ -399,32 +429,20 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // label10
+            // informesToolStripMenuItem
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(39, 31);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 13);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Deporte";
+            this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.informesEstadisticosToolStripMenuItem});
+            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.informesToolStripMenuItem.Text = "Informes";
             // 
-            // label11
+            // informesEstadisticosToolStripMenuItem
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(129, 31);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 13);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Profesor";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(222, 31);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 13);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Categorias";
+            this.informesEstadisticosToolStripMenuItem.Name = "informesEstadisticosToolStripMenuItem";
+            this.informesEstadisticosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.informesEstadisticosToolStripMenuItem.Text = "Informes Estadisticos";
+            this.informesEstadisticosToolStripMenuItem.Click += new System.EventHandler(this.informesEstadisticosToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 
@@ -499,6 +517,8 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informesEstadisticosToolStripMenuItem;
     }
 }
 
