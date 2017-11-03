@@ -116,7 +116,7 @@ namespace KenosTesis
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //Traer Tabla deportes, tabla categoria
+            AltaAsociacionDeporte aadep = new AltaAsociacionDeporte();
         }
 
         private void button2_Click(object sender, EventArgs e)

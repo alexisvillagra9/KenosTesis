@@ -77,6 +77,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSsexo.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_Categoria.cs">
+      <DependentUpon>DS_Categoria.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Categoria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Categoria.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GraficoCircularEstadosSocios.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -174,6 +182,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>pilarSportClubDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet24.xsd</DependentUpon>
     </Compile>
     <Compile Include="pilarSportClubDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -355,6 +368,17 @@
     </None>
     <None Include="DSsexo.xss">
       <DependentUpon>DSsexo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Categoria.xsc">
+      <DependentUpon>DS_Categoria.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Categoria.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Categoria.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Categoria.xss">
+      <DependentUpon>DS_Categoria.xsd</DependentUpon>
     </None>
     <None Include="fomularios\inscripcion.pdf" />
     <None Include="GraficoCircularEstadosSocios.xsc">
@@ -554,6 +578,17 @@
     </None>
     <None Include="pilarSportClubDataSet23.xss">
       <DependentUpon>pilarSportClubDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet24.xsc">
+      <DependentUpon>pilarSportClubDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet24.xss">
+      <DependentUpon>pilarSportClubDataSet24.xsd</DependentUpon>
     </None>
     <None Include="pilarSportClubDataSet3.xsc">
       <DependentUpon>pilarSportClubDataSet3.xsd</DependentUpon>
