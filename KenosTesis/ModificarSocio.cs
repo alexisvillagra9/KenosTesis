@@ -117,6 +117,8 @@ namespace KenosTesis
         private void button4_Click(object sender, EventArgs e)
         {
             AltaAsociacionDeporte aadep = new AltaAsociacionDeporte();
+            AddOwnedForm(aadep);
+            aadep.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

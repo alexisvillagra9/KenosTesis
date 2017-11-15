@@ -36,6 +36,7 @@
             this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dS_Categoria = new KenosTesis.DS_Categoria();
             this.categoriaTableAdapter = new KenosTesis.DS_CategoriaTableAdapters.categoriaTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.deporteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
@@ -83,13 +84,24 @@
             // 
             this.categoriaTableAdapter.ClearBeforeFill = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(269, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Visible = false;
+            // 
             // AltaAsociacionDeporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 281);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Name = "AltaAsociacionDeporte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaAsociacionDeporte";
             this.Load += new System.EventHandler(this.AltaAsociacionDeporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.deporteBindingSource)).EndInit();
@@ -97,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Categoria)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,5 +122,6 @@
         private DS_Categoria dS_Categoria;
         private System.Windows.Forms.BindingSource categoriaBindingSource;
         private DS_CategoriaTableAdapters.categoriaTableAdapter categoriaTableAdapter;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -102,7 +102,7 @@ namespace KenosTesis
                 adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@idc", SqlDbType.Int));
 
                 conexion.Open();
-                adaptador.UpdateCommand.Parameters["@nom"].Value = comboBox1.sel+ " " + cbCS.SelectedValue + " " + cbCE.SelectedValue;
+                adaptador.UpdateCommand.Parameters["@nom"].Value = ((DataRowView)comboBox1.SelectedItem)["nombre"].ToString() + " " + ((DataRowView)cbCS.SelectedItem)["descripcion"].ToString() + " " + ((DataRowView)cbCE.SelectedItem)["descripcion"].ToString();
                 adaptador.UpdateCommand.Parameters["@pre"].Value = textBox3.Text;
                 adaptador.UpdateCommand.Parameters["@desc"].Value = textBox2.Text;
                 adaptador.UpdateCommand.Parameters["@pro"].Value = int.Parse(comboBox2.SelectedValue.ToString());
@@ -113,7 +113,7 @@ namespace KenosTesis
                 adaptador.UpdateCommand.Parameters["@ceda"].Value = int.Parse(cbCE.SelectedValue.ToString());
                 adaptador.UpdateCommand.Parameters["@idc"].Value = int.Parse(label7.Text);
                 adaptador.UpdateCommand.ExecuteNonQuery();
-                MessageBox.Show("Se modifico correctamente la Categoria " + comboBox1.SelectedItem.ToString() + " " + cbCS.SelectedItem.ToString() + " " + cbCE.SelectedItem.ToString());
+                MessageBox.Show("Se modifico correctamente la Categoria " + ((DataRowView)comboBox1.SelectedItem)["nombre"].ToString() + " " + ((DataRowView)cbCS.SelectedItem)["descripcion"].ToString() + " " + ((DataRowView)cbCE.SelectedItem)["descripcion"].ToString());
                 conexion.Close();
             }
             if (botGuaReg.Equals("Registrar"))
@@ -130,7 +130,7 @@ namespace KenosTesis
                 adaptador.InsertCommand.Parameters.Add(new SqlParameter("@csex", SqlDbType.Int));
                 adaptador.InsertCommand.Parameters.Add(new SqlParameter("@ceda", SqlDbType.Int));
                 conexion.Open();
-                adaptador.InsertCommand.Parameters["@nom"].Value = comboBox1.SelectedItem + " " + cbCS.SelectedItem + " " + cbCE.SelectedItem;
+                adaptador.InsertCommand.Parameters["@nom"].Value = ((DataRowView)comboBox1.SelectedItem)["nombre"].ToString() + " " + ((DataRowView)cbCS.SelectedItem)["descripcion"].ToString() + " " + ((DataRowView)cbCE.SelectedItem)["descripcion"].ToString();
                 adaptador.InsertCommand.Parameters["@pre"].Value = float.Parse(textBox3.Text);
                 adaptador.InsertCommand.Parameters["@desc"].Value = textBox2.Text;
                 adaptador.InsertCommand.Parameters["@pro"].Value = int.Parse(comboBox2.SelectedValue.ToString());
