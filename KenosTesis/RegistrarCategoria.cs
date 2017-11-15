@@ -24,16 +24,12 @@ namespace KenosTesis
         private DataSet datoObj;
         private void RegistrarCategoria_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet19.cateEdad' Puede moverla o quitarla según sea necesario.
-            this.cateEdadTableAdapter.Fill(this.pilarSportClubDataSet19.cateEdad);
-            // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet18.cateSexo' Puede moverla o quitarla según sea necesario.
-            this.cateSexoTableAdapter.Fill(this.pilarSportClubDataSet18.cateSexo);
-            // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet17.buscarCategorias' Puede moverla o quitarla según sea necesario.
+            // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet26.cateEdad' Puede moverla o quitarla según sea necesario.
+            this.cateEdadTableAdapter.Fill(this.pilarSportClubDataSet26.cateEdad);
+            // TODO: esta línea de código carga datos en la tabla 'dS_Sexo.sexo' Puede moverla o quitarla según sea necesario.
+            this.sexoTableAdapter.Fill(this.dS_Sexo.sexo);
             this.buscarCategoriasTableAdapter.Fill(this.pilarSportClubDataSet17.buscarCategorias);
-            // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet16.buscarCategorias' Puede moverla o quitarla según sea necesario.
-            // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet15.profesor' Puede moverla o quitarla según sea necesario.
             this.profesorTableAdapter.Fill(this.pilarSportClubDataSet15.profesor);
-            // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet14.deporte' Puede moverla o quitarla según sea necesario.
             this.deporteTableAdapter.Fill(this.pilarSportClubDataSet14.deporte);
             dateTimePicker1.CustomFormat = ("HH:mm");
             dateTimePicker2.CustomFormat = ("HH:mm");
@@ -71,8 +67,6 @@ namespace KenosTesis
             }
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
-            comboBox3.SelectedIndex = 0;
-            comboBox4.SelectedIndex = 0;
             panel2.Visible = false;
             panel1.Visible = true;
             button5.Visible = true;
@@ -108,23 +102,23 @@ namespace KenosTesis
                 adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@idc", SqlDbType.Int));
 
                 conexion.Open();
-                adaptador.UpdateCommand.Parameters["@nom"].Value = comboBox1.SelectedItem.ToString()+" "+ comboBox3.SelectedItem.ToString()+" "+ comboBox4.SelectedItem.ToString();
+                adaptador.UpdateCommand.Parameters["@nom"].Value = comboBox1.sel+ " " + cbCS.SelectedValue + " " + cbCE.SelectedValue;
                 adaptador.UpdateCommand.Parameters["@pre"].Value = textBox3.Text;
                 adaptador.UpdateCommand.Parameters["@desc"].Value = textBox2.Text;
                 adaptador.UpdateCommand.Parameters["@pro"].Value = int.Parse(comboBox2.SelectedValue.ToString());
                 adaptador.UpdateCommand.Parameters["@dep"].Value = int.Parse(comboBox1.SelectedValue.ToString());
                 adaptador.UpdateCommand.Parameters["@hsi"].Value = dateTimePicker1.Value.ToString("HH:mm");
                 adaptador.UpdateCommand.Parameters["@hsf"].Value = dateTimePicker1.Value.ToString("HH:mm");
-                adaptador.UpdateCommand.Parameters["@csex"].Value = int.Parse(comboBox3.SelectedValue.ToString());
-                adaptador.UpdateCommand.Parameters["@ceda"].Value = int.Parse(comboBox4.SelectedValue.ToString());
+                adaptador.UpdateCommand.Parameters["@csex"].Value = int.Parse(cbCS.SelectedValue.ToString());
+                adaptador.UpdateCommand.Parameters["@ceda"].Value = int.Parse(cbCE.SelectedValue.ToString());
                 adaptador.UpdateCommand.Parameters["@idc"].Value = int.Parse(label7.Text);
                 adaptador.UpdateCommand.ExecuteNonQuery();
-                MessageBox.Show("Se modifico correctamente la Categoria " + comboBox1.SelectedItem.ToString() + " " + comboBox3.SelectedItem.ToString() + " " + comboBox4.SelectedItem.ToString());
+                MessageBox.Show("Se modifico correctamente la Categoria " + comboBox1.SelectedItem.ToString() + " " + cbCS.SelectedItem.ToString() + " " + cbCE.SelectedItem.ToString());
                 conexion.Close();
             }
             if (botGuaReg.Equals("Registrar"))
             {
-                SqlCommand alta = new SqlCommand("insert into categoria values (@nom, @pre, @desc, @pro, @dep, @hsi, @hsf, @csex, @ceda", conexion);
+                SqlCommand alta = new SqlCommand("insert into categoria values (@nom, @pre, @desc, @pro, @dep, @hsi, @hsf, @csex, @ceda)", conexion);
                 adaptador.InsertCommand = alta;
                 adaptador.InsertCommand.Parameters.Add(new SqlParameter("@nom", SqlDbType.VarChar, 50));
                 adaptador.InsertCommand.Parameters.Add(new SqlParameter("@pre", SqlDbType.Float));
@@ -136,15 +130,15 @@ namespace KenosTesis
                 adaptador.InsertCommand.Parameters.Add(new SqlParameter("@csex", SqlDbType.Int));
                 adaptador.InsertCommand.Parameters.Add(new SqlParameter("@ceda", SqlDbType.Int));
                 conexion.Open();
-                adaptador.InsertCommand.Parameters["@nom"].Value = comboBox1.SelectedItem.ToString() + " " + comboBox3.SelectedItem.ToString() + " " + comboBox4.SelectedItem.ToString();
+                adaptador.InsertCommand.Parameters["@nom"].Value = comboBox1.SelectedItem + " " + cbCS.SelectedItem + " " + cbCE.SelectedItem;
                 adaptador.InsertCommand.Parameters["@pre"].Value = float.Parse(textBox3.Text);
                 adaptador.InsertCommand.Parameters["@desc"].Value = textBox2.Text;
                 adaptador.InsertCommand.Parameters["@pro"].Value = int.Parse(comboBox2.SelectedValue.ToString());
                 adaptador.InsertCommand.Parameters["@dep"].Value = int.Parse(comboBox1.SelectedValue.ToString());
                 adaptador.InsertCommand.Parameters["@hsi"].Value = dateTimePicker1.Value.ToString("HH:mm");
                 adaptador.InsertCommand.Parameters["@hsf"].Value = dateTimePicker2.Value.ToString("HH:mm");
-                adaptador.InsertCommand.Parameters["@csex"].Value = int.Parse(comboBox3.SelectedValue.ToString());
-                adaptador.InsertCommand.Parameters["@ceda"].Value = int.Parse(comboBox4.SelectedValue.ToString());
+                adaptador.InsertCommand.Parameters["@csex"].Value = int.Parse(cbCS.SelectedValue.ToString());
+                adaptador.InsertCommand.Parameters["@ceda"].Value = int.Parse(cbCE.SelectedValue.ToString());
                 adaptador.InsertCommand.ExecuteNonQuery();
                 conexion.Close();
                 MessageBox.Show("Categoria Registrada Correctamente con el ID: " + consultaID(), "Alerta", MessageBoxButtons.OK);
@@ -192,8 +186,8 @@ namespace KenosTesis
                         adaptador.Fill(datoObj);
                         conexion.Close();
                         comboBox1.SelectedValue = datoObj.Tables[0].Rows[0][5].ToString();
-                        comboBox3.SelectedValue = datoObj.Tables[0].Rows[0][8].ToString();
-                        comboBox4.SelectedValue = datoObj.Tables[0].Rows[0][9].ToString();
+                        cbCS.SelectedValue = datoObj.Tables[0].Rows[0][8].ToString();
+                        cbCE.SelectedValue = datoObj.Tables[0].Rows[0][9].ToString();
                         dateTimePicker1.Value = Convert.ToDateTime(datoObj.Tables[0].Rows[0][6].ToString());
                         dateTimePicker2.Value = Convert.ToDateTime(datoObj.Tables[0].Rows[0][7].ToString());
                         comboBox1.SelectedValue = datoObj.Tables[0].Rows[0][5].ToString();
@@ -211,8 +205,8 @@ namespace KenosTesis
         {
             comboBox1.Enabled = false;
             comboBox2.Enabled = false;
-            comboBox4.Enabled = false;
-            comboBox3.Enabled = false;
+            cbCE.Enabled = false;
+            cbCS.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
             dateTimePicker1.Enabled = false;
@@ -222,8 +216,8 @@ namespace KenosTesis
         {
             comboBox1.Enabled = true;
             comboBox2.Enabled = true;
-            comboBox3.Enabled = true;
-            comboBox4.Enabled = true;
+            cbCS.Enabled = true;
+            cbCE.Enabled = true;
             textBox2.Enabled = true;
             textBox3.Enabled = true;
             dateTimePicker1.Enabled = true;
@@ -286,10 +280,10 @@ namespace KenosTesis
             conexion.Close();
             dataGridView1.DataSource = datos;
         }
-        
+
         private void button6_Click(object sender, EventArgs e)
         {
-            
+
             RegistrarProfesor rp = new RegistrarProfesor();
             rp.flag = 1;
             AddOwnedForm(rp);
@@ -299,7 +293,7 @@ namespace KenosTesis
 
         private void button8_Click(object sender, EventArgs e)
         {
-            
+
             RegistrarDeportes rd = new RegistrarDeportes();
             rd.flag = 1;
             AddOwnedForm(rd);
@@ -311,5 +305,7 @@ namespace KenosTesis
         {
             MessageBox.Show("Se considera INFANTIL de 6 a 12 anos. JOVENES de 13 a 17. ADULTOS de 18 a 35. VETERANO mas de 36");
         }
+
+
     }
 }

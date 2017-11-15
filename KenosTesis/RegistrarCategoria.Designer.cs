@@ -66,13 +66,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.deporteTableAdapter = new KenosTesis.pilarSportClubDataSet14TableAdapters.deporteTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbCE = new System.Windows.Forms.ComboBox();
+            this.cbCS = new System.Windows.Forms.ComboBox();
+            this.sexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Sexo = new KenosTesis.DS_Sexo();
             this.button9 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.cateEdadBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pilarSportClubDataSet19 = new KenosTesis.pilarSportClubDataSet19();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.cateSexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pilarSportClubDataSet18 = new KenosTesis.pilarSportClubDataSet18();
             this.button8 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -83,8 +81,10 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.profesorTableAdapter = new KenosTesis.pilarSportClubDataSet15TableAdapters.profesorTableAdapter();
             this.buscarCategoriasTableAdapter = new KenosTesis.pilarSportClubDataSet17TableAdapters.buscarCategoriasTableAdapter();
-            this.cateSexoTableAdapter = new KenosTesis.pilarSportClubDataSet18TableAdapters.cateSexoTableAdapter();
-            this.cateEdadTableAdapter = new KenosTesis.pilarSportClubDataSet19TableAdapters.cateEdadTableAdapter();
+            this.sexoTableAdapter = new KenosTesis.DS_SexoTableAdapters.sexoTableAdapter();
+            this.pilarSportClubDataSet26 = new KenosTesis.pilarSportClubDataSet26();
+            this.cateEdadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cateEdadTableAdapter = new KenosTesis.pilarSportClubDataSet26TableAdapters.cateEdadTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -94,11 +94,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.deporteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet14)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cateEdadBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cateSexoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Sexo)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cateEdadBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button6
@@ -404,9 +404,9 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbCE);
+            this.panel1.Controls.Add(this.cbCS);
             this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.comboBox4);
-            this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.dateTimePicker2);
@@ -433,61 +433,51 @@
             this.panel1.Size = new System.Drawing.Size(570, 297);
             this.panel1.TabIndex = 91;
             // 
+            // cbCE
+            // 
+            this.cbCE.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.cateEdadBindingSource, "idCE", true));
+            this.cbCE.DataSource = this.cateEdadBindingSource;
+            this.cbCE.DisplayMember = "descripcion";
+            this.cbCE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCE.FormattingEnabled = true;
+            this.cbCE.Location = new System.Drawing.Point(245, 68);
+            this.cbCE.Name = "cbCE";
+            this.cbCE.Size = new System.Drawing.Size(110, 21);
+            this.cbCE.TabIndex = 100;
+            this.cbCE.ValueMember = "idCE";
+            // 
+            // cbCS
+            // 
+            this.cbCS.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.sexoBindingSource, "idSexo", true));
+            this.cbCS.DataSource = this.sexoBindingSource;
+            this.cbCS.DisplayMember = "descripcion";
+            this.cbCS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCS.FormattingEnabled = true;
+            this.cbCS.Location = new System.Drawing.Point(122, 68);
+            this.cbCS.Name = "cbCS";
+            this.cbCS.Size = new System.Drawing.Size(110, 21);
+            this.cbCS.TabIndex = 99;
+            this.cbCS.ValueMember = "idSexo";
+            // 
+            // sexoBindingSource
+            // 
+            this.sexoBindingSource.DataMember = "sexo";
+            this.sexoBindingSource.DataSource = this.dS_Sexo;
+            // 
+            // dS_Sexo
+            // 
+            this.dS_Sexo.DataSetName = "DS_Sexo";
+            this.dS_Sexo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(362, 68);
+            this.button9.Location = new System.Drawing.Point(361, 67);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(29, 23);
             this.button9.TabIndex = 98;
             this.button9.Text = "?";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.cateEdadBindingSource, "idCE", true));
-            this.comboBox4.DataSource = this.cateEdadBindingSource;
-            this.comboBox4.DisplayMember = "descripcion";
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(245, 69);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(110, 21);
-            this.comboBox4.TabIndex = 97;
-            this.comboBox4.ValueMember = "idCE";
-            // 
-            // cateEdadBindingSource
-            // 
-            this.cateEdadBindingSource.DataMember = "cateEdad";
-            this.cateEdadBindingSource.DataSource = this.pilarSportClubDataSet19;
-            // 
-            // pilarSportClubDataSet19
-            // 
-            this.pilarSportClubDataSet19.DataSetName = "pilarSportClubDataSet19";
-            this.pilarSportClubDataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.cateSexoBindingSource, "idCS", true));
-            this.comboBox3.DataSource = this.cateSexoBindingSource;
-            this.comboBox3.DisplayMember = "descripcion";
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(122, 69);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(110, 21);
-            this.comboBox3.TabIndex = 96;
-            this.comboBox3.ValueMember = "idCS";
-            // 
-            // cateSexoBindingSource
-            // 
-            this.cateSexoBindingSource.DataMember = "cateSexo";
-            this.cateSexoBindingSource.DataSource = this.pilarSportClubDataSet18;
-            // 
-            // pilarSportClubDataSet18
-            // 
-            this.pilarSportClubDataSet18.DataSetName = "pilarSportClubDataSet18";
-            this.pilarSportClubDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button8
             // 
@@ -575,9 +565,19 @@
             // 
             this.buscarCategoriasTableAdapter.ClearBeforeFill = true;
             // 
-            // cateSexoTableAdapter
+            // sexoTableAdapter
             // 
-            this.cateSexoTableAdapter.ClearBeforeFill = true;
+            this.sexoTableAdapter.ClearBeforeFill = true;
+            // 
+            // pilarSportClubDataSet26
+            // 
+            this.pilarSportClubDataSet26.DataSetName = "pilarSportClubDataSet26";
+            this.pilarSportClubDataSet26.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cateEdadBindingSource
+            // 
+            this.cateEdadBindingSource.DataMember = "cateEdad";
+            this.cateEdadBindingSource.DataSource = this.pilarSportClubDataSet26;
             // 
             // cateEdadTableAdapter
             // 
@@ -605,12 +605,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet14)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cateEdadBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cateSexoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Sexo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cateEdadBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -664,14 +664,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreProfesorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoProfesorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private pilarSportClubDataSet18 pilarSportClubDataSet18;
-        private System.Windows.Forms.BindingSource cateSexoBindingSource;
-        private pilarSportClubDataSet18TableAdapters.cateSexoTableAdapter cateSexoTableAdapter;
-        private pilarSportClubDataSet19 pilarSportClubDataSet19;
-        private System.Windows.Forms.BindingSource cateEdadBindingSource;
-        private pilarSportClubDataSet19TableAdapters.cateEdadTableAdapter cateEdadTableAdapter;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ComboBox cbCS;
+        private System.Windows.Forms.ComboBox cbCE;
+        private DS_Sexo dS_Sexo;
+        private System.Windows.Forms.BindingSource sexoBindingSource;
+        private DS_SexoTableAdapters.sexoTableAdapter sexoTableAdapter;
+        private pilarSportClubDataSet26 pilarSportClubDataSet26;
+        private System.Windows.Forms.BindingSource cateEdadBindingSource;
+        private pilarSportClubDataSet26TableAdapters.cateEdadTableAdapter cateEdadTableAdapter;
     }
 }
