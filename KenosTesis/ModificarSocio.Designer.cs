@@ -69,6 +69,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.asociacionDeporteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pilarSportClubDataSet27 = new KenosTesis.pilarSportClubDataSet27();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -84,12 +86,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.sexoTableAdapter1 = new KenosTesis.pilarSportClubDataSet11TableAdapters.sexoTableAdapter();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.asociacionDeporteTableAdapter = new KenosTesis.pilarSportClubDataSet27TableAdapters.asociacionDeporteTableAdapter();
+            this.seleccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idAsociacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaFinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet2)).BeginInit();
@@ -100,6 +104,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asociacionDeporteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet27)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -485,15 +491,18 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewCheckBoxColumn1,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.Categoria,
-            this.dataGridViewTextBoxColumn4});
+            this.seleccion,
+            this.idAsociacion,
+            this.nombreDataGridViewTextBoxColumn,
+            this.fechaInicioDataGridViewTextBoxColumn,
+            this.fechaFinDataGridViewTextBoxColumn,
+            this.categoriaDataGridViewTextBoxColumn,
+            this.estadoDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.asociacionDeporteBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
@@ -501,6 +510,17 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(445, 104);
             this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // asociacionDeporteBindingSource
+            // 
+            this.asociacionDeporteBindingSource.DataMember = "asociacionDeporte";
+            this.asociacionDeporteBindingSource.DataSource = this.pilarSportClubDataSet27;
+            // 
+            // pilarSportClubDataSet27
+            // 
+            this.pilarSportClubDataSet27.DataSetName = "pilarSportClubDataSet27";
+            this.pilarSportClubDataSet27.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button5
             // 
@@ -634,55 +654,64 @@
             // 
             this.sexoTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataGridViewCheckBoxColumn1
+            // asociacionDeporteTableAdapter
             // 
-            this.dataGridViewCheckBoxColumn1.FillWeight = 31.67421F;
-            this.dataGridViewCheckBoxColumn1.HeaderText = "";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.asociacionDeporteTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // seleccion
             // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 120.4553F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.seleccion.FillWeight = 60.9137F;
+            this.seleccion.HeaderText = "";
+            this.seleccion.Name = "seleccion";
+            this.seleccion.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // idAsociacion
             // 
-            this.dataGridViewTextBoxColumn2.FillWeight = 115.9905F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Fecha Inicio";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.idAsociacion.DataPropertyName = "idAsociacion";
+            this.idAsociacion.HeaderText = "idAsociacion";
+            this.idAsociacion.Name = "idAsociacion";
+            this.idAsociacion.ReadOnly = true;
+            this.idAsociacion.Visible = false;
             // 
-            // dataGridViewTextBoxColumn3
+            // nombreDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn3.FillWeight = 112.2328F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Fecha Fin";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.FillWeight = 107.8173F;
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Categoria
+            // fechaInicioDataGridViewTextBoxColumn
             // 
-            this.Categoria.FillWeight = 104.1684F;
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
+            this.fechaInicioDataGridViewTextBoxColumn.DataPropertyName = "Fecha Inicio";
+            this.fechaInicioDataGridViewTextBoxColumn.FillWeight = 107.8173F;
+            this.fechaInicioDataGridViewTextBoxColumn.HeaderText = "Fecha Inicio";
+            this.fechaInicioDataGridViewTextBoxColumn.Name = "fechaInicioDataGridViewTextBoxColumn";
+            this.fechaInicioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // fechaFinDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn4.FillWeight = 109.0703F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Estado";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fechaFinDataGridViewTextBoxColumn.DataPropertyName = "Fecha Fin";
+            this.fechaFinDataGridViewTextBoxColumn.FillWeight = 107.8173F;
+            this.fechaFinDataGridViewTextBoxColumn.HeaderText = "Fecha Fin";
+            this.fechaFinDataGridViewTextBoxColumn.Name = "fechaFinDataGridViewTextBoxColumn";
+            this.fechaFinDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // categoriaDataGridViewTextBoxColumn
+            // 
+            this.categoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria";
+            this.categoriaDataGridViewTextBoxColumn.FillWeight = 107.8173F;
+            this.categoriaDataGridViewTextBoxColumn.HeaderText = "Categoria";
+            this.categoriaDataGridViewTextBoxColumn.Name = "categoriaDataGridViewTextBoxColumn";
+            this.categoriaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
+            this.estadoDataGridViewTextBoxColumn.FillWeight = 107.8173F;
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ModificarSocio
             // 
@@ -724,6 +753,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asociacionDeporteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pilarSportClubDataSet27)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -785,11 +816,20 @@
         private pilarSportClubDataSet11TableAdapters.sexoTableAdapter sexoTableAdapter1;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label ngrupo;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAsociacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuotaDeporteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn socioDataGridViewTextBoxColumn;
+        public pilarSportClubDataSet27 pilarSportClubDataSet27;
+        public System.Windows.Forms.BindingSource asociacionDeporteBindingSource;
+        public pilarSportClubDataSet27TableAdapters.asociacionDeporteTableAdapter asociacionDeporteTableAdapter;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn seleccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAsociacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaFinDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
     }
 }

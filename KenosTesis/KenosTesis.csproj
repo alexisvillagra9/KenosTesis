@@ -82,10 +82,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cateSexo.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsCategoria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCategoria.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSsexo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSsexo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_AsociacionDeporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AsociacionDeporte.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_Categoria.cs">
       <DependentUpon>DS_Categoria.xsd</DependentUpon>
@@ -212,6 +222,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>pilarSportClubDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pilarSportClubDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilarSportClubDataSet27.xsd</DependentUpon>
     </Compile>
     <Compile Include="pilarSportClubDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -405,6 +420,17 @@
     <None Include="cateSexo.xss">
       <DependentUpon>cateSexo.xsd</DependentUpon>
     </None>
+    <None Include="dsCategoria.xsc">
+      <DependentUpon>dsCategoria.xsd</DependentUpon>
+    </None>
+    <None Include="dsCategoria.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCategoria.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsCategoria.xss">
+      <DependentUpon>dsCategoria.xsd</DependentUpon>
+    </None>
     <None Include="DSsexo.xsc">
       <DependentUpon>DSsexo.xsd</DependentUpon>
     </None>
@@ -415,6 +441,17 @@
     </None>
     <None Include="DSsexo.xss">
       <DependentUpon>DSsexo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AsociacionDeporte.xsc">
+      <DependentUpon>DS_AsociacionDeporte.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AsociacionDeporte.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_AsociacionDeporte.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_AsociacionDeporte.xss">
+      <DependentUpon>DS_AsociacionDeporte.xsd</DependentUpon>
     </None>
     <None Include="DS_Categoria.xsc">
       <DependentUpon>DS_Categoria.xsd</DependentUpon>
@@ -669,6 +706,17 @@
     </None>
     <None Include="pilarSportClubDataSet26.xss">
       <DependentUpon>pilarSportClubDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet27.xsc">
+      <DependentUpon>pilarSportClubDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="pilarSportClubDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilarSportClubDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilarSportClubDataSet27.xss">
+      <DependentUpon>pilarSportClubDataSet27.xsd</DependentUpon>
     </None>
     <None Include="pilarSportClubDataSet3.xsc">
       <DependentUpon>pilarSportClubDataSet3.xsd</DependentUpon>

@@ -21,7 +21,7 @@ namespace KenosTesis
         private SqlConnection conexion;
         private SqlDataAdapter adaptador;
         private DataTable datos;
-        public String palabraBusq1="";
+        public String palabraBusq1 = "";
         public String palabraBusq2 = "";
         public String palabraBusq3 = "";
 
@@ -32,7 +32,7 @@ namespace KenosTesis
 
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                if (dataGridView1.Rows[i].Cells[0].Value==null)
+                if (dataGridView1.Rows[i].Cells[0].Value == null)
                 {
 
                 }
@@ -43,9 +43,9 @@ namespace KenosTesis
                         ModificarSocio ms = Owner as ModificarSocio;
                         ms.nsocio.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
                         conexion.Close();
-                        ms.Rellenar (int.Parse(ms.nsocio.Text)) ;
+                        ms.Rellenar(int.Parse(ms.nsocio.Text));
                         ms.bloquearCampos();
-                        if(ms.ngrupo.Text.Equals("No tiene"))
+                        if (ms.ngrupo.Text.Equals("No tiene"))
                         {
                             ms.button1.Visible = false;
                         }
@@ -54,12 +54,14 @@ namespace KenosTesis
                             ms.button1.Visible = true;
                         }
                         ms.button9.Visible = true;
+                        ms.asociacionDeporteTableAdapter.Fill(ms.pilarSportClubDataSet27.asociacionDeporte, int.Parse(ms.nsocio.Text));
+
                         //ms.pintarBloqueados();
                         ms.Show();
                         break;
                     }
                 }
-                
+
             }
             this.Close();
         }
@@ -71,9 +73,9 @@ namespace KenosTesis
             adaptador = new SqlDataAdapter();
             adaptador.SelectCommand = new SqlCommand("buscarPorTodo", conexion);
             adaptador.SelectCommand.CommandType = CommandType.StoredProcedure;
-            adaptador.SelectCommand.Parameters.Add("@palabra1", SqlDbType.VarChar,50);
-            adaptador.SelectCommand.Parameters.Add("@palabra2", SqlDbType.VarChar,50);
-            adaptador.SelectCommand.Parameters.Add("@palabra3", SqlDbType.VarChar,50);
+            adaptador.SelectCommand.Parameters.Add("@palabra1", SqlDbType.VarChar, 50);
+            adaptador.SelectCommand.Parameters.Add("@palabra2", SqlDbType.VarChar, 50);
+            adaptador.SelectCommand.Parameters.Add("@palabra3", SqlDbType.VarChar, 50);
             datos = new DataTable();
             adaptador.SelectCommand.Parameters["@palabra1"].Value = textBox1.Text;
             adaptador.SelectCommand.Parameters["@palabra2"].Value = textBox2.Text;
@@ -96,8 +98,8 @@ namespace KenosTesis
             {
                 dataGridView1.Rows[i].Cells[0].Value = false;
             }
-           dataGridView1.Rows[columna].Cells[0].Value = true;
+            dataGridView1.Rows[columna].Cells[0].Value = true;
         }
-        
+
     }
 }

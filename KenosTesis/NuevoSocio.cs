@@ -37,7 +37,7 @@ namespace KenosTesis
             datoObj = new DataSet();
 
             //Alta
-            SqlCommand alta = new SqlCommand("insert into socio values (@nom, @ape, @fec, @dir, @loc, @tel, @dni, @sex, @est, @gf, @obs, @feci,@fecf,@cso, @aso)", conexion);
+            SqlCommand alta = new SqlCommand("insert into socio values (@nom, @ape, @fec, @dir, @loc, @tel, @dni, @sex, @est, @gf, @obs, @feci,@fecf)", conexion);
             adaptador.InsertCommand = alta;
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@nom", SqlDbType.VarChar, 50));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@ape", SqlDbType.VarChar, 50));
@@ -52,8 +52,6 @@ namespace KenosTesis
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@obs", SqlDbType.VarChar, 255));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@feci", SqlDbType.Date));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fecf", SqlDbType.Date));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@cso", SqlDbType.Int));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@aso", SqlDbType.Int));
 
             //Modifica para Asignar el ID De cuota social.
             SqlCommand modifica = new SqlCommand("update socio set idCuotaXSocio=@cso where idSocio=@idso", conexion);
@@ -190,8 +188,6 @@ namespace KenosTesis
                     adaptador.InsertCommand.Parameters["@obs"].Value = textBox4.Text;
                     adaptador.InsertCommand.Parameters["@feci"].Value = DateTime.Today;
                     adaptador.InsertCommand.Parameters["@fecf"].Value = System.DBNull.Value;
-                    adaptador.InsertCommand.Parameters["@cso"].Value = System.DBNull.Value;
-                    adaptador.InsertCommand.Parameters["@aso"].Value = System.DBNull.Value;
                     adaptador.InsertCommand.ExecuteNonQuery();
 
                     MessageBox.Show("Socio Registrado Correctamente con el ID: " + consultaID(), "Alerta", MessageBoxButtons.OK);

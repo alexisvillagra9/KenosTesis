@@ -20,17 +20,17 @@ namespace KenosTesis {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DS_Categoria")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DS_AsociacionDeporte")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DS_Categoria : global::System.Data.DataSet {
+    public partial class DS_AsociacionDeporte : global::System.Data.DataSet {
         
-        private categoriaDataTable tablecategoria;
+        private asociacionDeporteDataTable tableasociacionDeporte;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DS_Categoria() {
+        public DS_AsociacionDeporte() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace KenosTesis {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DS_Categoria(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DS_AsociacionDeporte(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace KenosTesis {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["categoria"] != null)) {
-                    base.Tables.Add(new categoriaDataTable(ds.Tables["categoria"]));
+                if ((ds.Tables["asociacionDeporte"] != null)) {
+                    base.Tables.Add(new asociacionDeporteDataTable(ds.Tables["asociacionDeporte"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace KenosTesis {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public categoriaDataTable categoria {
+        public asociacionDeporteDataTable asociacionDeporte {
             get {
-                return this.tablecategoria;
+                return this.tableasociacionDeporte;
             }
         }
         
@@ -127,7 +127,7 @@ namespace KenosTesis {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DS_Categoria cln = ((DS_Categoria)(base.Clone()));
+            DS_AsociacionDeporte cln = ((DS_AsociacionDeporte)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace KenosTesis {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["categoria"] != null)) {
-                    base.Tables.Add(new categoriaDataTable(ds.Tables["categoria"]));
+                if ((ds.Tables["asociacionDeporte"] != null)) {
+                    base.Tables.Add(new asociacionDeporteDataTable(ds.Tables["asociacionDeporte"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace KenosTesis {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablecategoria = ((categoriaDataTable)(base.Tables["categoria"]));
+            this.tableasociacionDeporte = ((asociacionDeporteDataTable)(base.Tables["asociacionDeporte"]));
             if ((initTable == true)) {
-                if ((this.tablecategoria != null)) {
-                    this.tablecategoria.InitVars();
+                if ((this.tableasociacionDeporte != null)) {
+                    this.tableasociacionDeporte.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace KenosTesis {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DS_Categoria";
+            this.DataSetName = "DS_AsociacionDeporte";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DS_Categoria.xsd";
+            this.Namespace = "http://tempuri.org/DS_AsociacionDeporte.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablecategoria = new categoriaDataTable();
-            base.Tables.Add(this.tablecategoria);
+            this.tableasociacionDeporte = new asociacionDeporteDataTable();
+            base.Tables.Add(this.tableasociacionDeporte);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializecategoria() {
+        private bool ShouldSerializeasociacionDeporte() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace KenosTesis {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DS_Categoria ds = new DS_Categoria();
+            DS_AsociacionDeporte ds = new DS_AsociacionDeporte();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,23 +270,29 @@ namespace KenosTesis {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void categoriaRowChangeEventHandler(object sender, categoriaRowChangeEvent e);
+        public delegate void asociacionDeporteRowChangeEventHandler(object sender, asociacionDeporteRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class categoriaDataTable : global::System.Data.TypedTableBase<categoriaRow> {
+        public partial class asociacionDeporteDataTable : global::System.Data.TypedTableBase<asociacionDeporteRow> {
             
-            private global::System.Data.DataColumn columnidCategoria;
+            private global::System.Data.DataColumn columnfechaInicio;
+            
+            private global::System.Data.DataColumn columnfechaFin;
             
             private global::System.Data.DataColumn columnnombre;
             
+            private global::System.Data.DataColumn columnCategoria;
+            
+            private global::System.Data.DataColumn columnEstado;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriaDataTable() {
-                this.TableName = "categoria";
+            public asociacionDeporteDataTable() {
+                this.TableName = "asociacionDeporte";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +300,7 @@ namespace KenosTesis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal categoriaDataTable(global::System.Data.DataTable table) {
+            internal asociacionDeporteDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,16 +317,24 @@ namespace KenosTesis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected categoriaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected asociacionDeporteDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn idCategoriaColumn {
+            public global::System.Data.DataColumn fechaInicioColumn {
                 get {
-                    return this.columnidCategoria;
+                    return this.columnfechaInicio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn fechaFinColumn {
+                get {
+                    return this.columnfechaFin;
                 }
             }
             
@@ -329,6 +343,22 @@ namespace KenosTesis {
             public global::System.Data.DataColumn nombreColumn {
                 get {
                     return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CategoriaColumn {
+                get {
+                    return this.columnCategoria;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn EstadoColumn {
+                get {
+                    return this.columnEstado;
                 }
             }
             
@@ -343,53 +373,49 @@ namespace KenosTesis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriaRow this[int index] {
+            public asociacionDeporteRow this[int index] {
                 get {
-                    return ((categoriaRow)(this.Rows[index]));
+                    return ((asociacionDeporteRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event categoriaRowChangeEventHandler categoriaRowChanging;
+            public event asociacionDeporteRowChangeEventHandler asociacionDeporteRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event categoriaRowChangeEventHandler categoriaRowChanged;
+            public event asociacionDeporteRowChangeEventHandler asociacionDeporteRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event categoriaRowChangeEventHandler categoriaRowDeleting;
+            public event asociacionDeporteRowChangeEventHandler asociacionDeporteRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event categoriaRowChangeEventHandler categoriaRowDeleted;
+            public event asociacionDeporteRowChangeEventHandler asociacionDeporteRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddcategoriaRow(categoriaRow row) {
+            public void AddasociacionDeporteRow(asociacionDeporteRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriaRow AddcategoriaRow(string nombre) {
-                categoriaRow rowcategoriaRow = ((categoriaRow)(this.NewRow()));
+            public asociacionDeporteRow AddasociacionDeporteRow(System.DateTime fechaInicio, System.DateTime fechaFin, string nombre, string Categoria, string Estado) {
+                asociacionDeporteRow rowasociacionDeporteRow = ((asociacionDeporteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        nombre};
-                rowcategoriaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowcategoriaRow);
-                return rowcategoriaRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriaRow FindByidCategoria(int idCategoria) {
-                return ((categoriaRow)(this.Rows.Find(new object[] {
-                            idCategoria})));
+                        fechaInicio,
+                        fechaFin,
+                        nombre,
+                        Categoria,
+                        Estado};
+                rowasociacionDeporteRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowasociacionDeporteRow);
+                return rowasociacionDeporteRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                categoriaDataTable cln = ((categoriaDataTable)(base.Clone()));
+                asociacionDeporteDataTable cln = ((asociacionDeporteDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -397,58 +423,61 @@ namespace KenosTesis {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new categoriaDataTable();
+                return new asociacionDeporteDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnidCategoria = base.Columns["idCategoria"];
+                this.columnfechaInicio = base.Columns["fechaInicio"];
+                this.columnfechaFin = base.Columns["fechaFin"];
                 this.columnnombre = base.Columns["nombre"];
+                this.columnCategoria = base.Columns["Categoria"];
+                this.columnEstado = base.Columns["Estado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnidCategoria = new global::System.Data.DataColumn("idCategoria", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidCategoria);
+                this.columnfechaInicio = new global::System.Data.DataColumn("fechaInicio", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfechaInicio);
+                this.columnfechaFin = new global::System.Data.DataColumn("fechaFin", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfechaFin);
                 this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidCategoria}, true));
-                this.columnidCategoria.AutoIncrement = true;
-                this.columnidCategoria.AutoIncrementSeed = -1;
-                this.columnidCategoria.AutoIncrementStep = -1;
-                this.columnidCategoria.AllowDBNull = false;
-                this.columnidCategoria.ReadOnly = true;
-                this.columnidCategoria.Unique = true;
+                this.columnCategoria = new global::System.Data.DataColumn("Categoria", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategoria);
+                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado);
                 this.columnnombre.MaxLength = 50;
+                this.columnCategoria.MaxLength = 50;
+                this.columnEstado.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriaRow NewcategoriaRow() {
-                return ((categoriaRow)(this.NewRow()));
+            public asociacionDeporteRow NewasociacionDeporteRow() {
+                return ((asociacionDeporteRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new categoriaRow(builder);
+                return new asociacionDeporteRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(categoriaRow);
+                return typeof(asociacionDeporteRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.categoriaRowChanged != null)) {
-                    this.categoriaRowChanged(this, new categoriaRowChangeEvent(((categoriaRow)(e.Row)), e.Action));
+                if ((this.asociacionDeporteRowChanged != null)) {
+                    this.asociacionDeporteRowChanged(this, new asociacionDeporteRowChangeEvent(((asociacionDeporteRow)(e.Row)), e.Action));
                 }
             }
             
@@ -456,8 +485,8 @@ namespace KenosTesis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.categoriaRowChanging != null)) {
-                    this.categoriaRowChanging(this, new categoriaRowChangeEvent(((categoriaRow)(e.Row)), e.Action));
+                if ((this.asociacionDeporteRowChanging != null)) {
+                    this.asociacionDeporteRowChanging(this, new asociacionDeporteRowChangeEvent(((asociacionDeporteRow)(e.Row)), e.Action));
                 }
             }
             
@@ -465,8 +494,8 @@ namespace KenosTesis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.categoriaRowDeleted != null)) {
-                    this.categoriaRowDeleted(this, new categoriaRowChangeEvent(((categoriaRow)(e.Row)), e.Action));
+                if ((this.asociacionDeporteRowDeleted != null)) {
+                    this.asociacionDeporteRowDeleted(this, new asociacionDeporteRowChangeEvent(((asociacionDeporteRow)(e.Row)), e.Action));
                 }
             }
             
@@ -474,14 +503,14 @@ namespace KenosTesis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.categoriaRowDeleting != null)) {
-                    this.categoriaRowDeleting(this, new categoriaRowChangeEvent(((categoriaRow)(e.Row)), e.Action));
+                if ((this.asociacionDeporteRowDeleting != null)) {
+                    this.asociacionDeporteRowDeleting(this, new asociacionDeporteRowChangeEvent(((asociacionDeporteRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovecategoriaRow(categoriaRow row) {
+            public void RemoveasociacionDeporteRow(asociacionDeporteRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -490,7 +519,7 @@ namespace KenosTesis {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DS_Categoria ds = new DS_Categoria();
+                DS_AsociacionDeporte ds = new DS_AsociacionDeporte();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -508,7 +537,7 @@ namespace KenosTesis {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "categoriaDataTable";
+                attribute2.FixedValue = "asociacionDeporteDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -552,25 +581,46 @@ namespace KenosTesis {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class categoriaRow : global::System.Data.DataRow {
+        public partial class asociacionDeporteRow : global::System.Data.DataRow {
             
-            private categoriaDataTable tablecategoria;
+            private asociacionDeporteDataTable tableasociacionDeporte;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal categoriaRow(global::System.Data.DataRowBuilder rb) : 
+            internal asociacionDeporteRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablecategoria = ((categoriaDataTable)(this.Table));
+                this.tableasociacionDeporte = ((asociacionDeporteDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int idCategoria {
+            public System.DateTime fechaInicio {
                 get {
-                    return ((int)(this[this.tablecategoria.idCategoriaColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableasociacionDeporte.fechaInicioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaInicio\' de la tabla \'asociacionDeporte\' es DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tablecategoria.idCategoriaColumn] = value;
+                    this[this.tableasociacionDeporte.fechaInicioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime fechaFin {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableasociacionDeporte.fechaFinColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaFin\' de la tabla \'asociacionDeporte\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableasociacionDeporte.fechaFinColumn] = value;
                 }
             }
             
@@ -579,27 +629,107 @@ namespace KenosTesis {
             public string nombre {
                 get {
                     try {
-                        return ((string)(this[this.tablecategoria.nombreColumn]));
+                        return ((string)(this[this.tableasociacionDeporte.nombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'categoria\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'asociacionDeporte\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablecategoria.nombreColumn] = value;
+                    this[this.tableasociacionDeporte.nombreColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Categoria {
+                get {
+                    try {
+                        return ((string)(this[this.tableasociacionDeporte.CategoriaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Categoria\' de la tabla \'asociacionDeporte\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableasociacionDeporte.CategoriaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Estado {
+                get {
+                    try {
+                        return ((string)(this[this.tableasociacionDeporte.EstadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Estado\' de la tabla \'asociacionDeporte\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableasociacionDeporte.EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsfechaInicioNull() {
+                return this.IsNull(this.tableasociacionDeporte.fechaInicioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetfechaInicioNull() {
+                this[this.tableasociacionDeporte.fechaInicioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsfechaFinNull() {
+                return this.IsNull(this.tableasociacionDeporte.fechaFinColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetfechaFinNull() {
+                this[this.tableasociacionDeporte.fechaFinColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsnombreNull() {
-                return this.IsNull(this.tablecategoria.nombreColumn);
+                return this.IsNull(this.tableasociacionDeporte.nombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetnombreNull() {
-                this[this.tablecategoria.nombreColumn] = global::System.Convert.DBNull;
+                this[this.tableasociacionDeporte.nombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCategoriaNull() {
+                return this.IsNull(this.tableasociacionDeporte.CategoriaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCategoriaNull() {
+                this[this.tableasociacionDeporte.CategoriaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsEstadoNull() {
+                return this.IsNull(this.tableasociacionDeporte.EstadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetEstadoNull() {
+                this[this.tableasociacionDeporte.EstadoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -607,22 +737,22 @@ namespace KenosTesis {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class categoriaRowChangeEvent : global::System.EventArgs {
+        public class asociacionDeporteRowChangeEvent : global::System.EventArgs {
             
-            private categoriaRow eventRow;
+            private asociacionDeporteRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriaRowChangeEvent(categoriaRow row, global::System.Data.DataRowAction action) {
+            public asociacionDeporteRowChangeEvent(asociacionDeporteRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriaRow Row {
+            public asociacionDeporteRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -638,7 +768,7 @@ namespace KenosTesis {
         }
     }
 }
-namespace KenosTesis.DS_CategoriaTableAdapters {
+namespace KenosTesis.DS_AsociacionDeporteTableAdapters {
     
     
     /// <summary>
@@ -650,7 +780,7 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class categoriaTableAdapter : global::System.ComponentModel.Component {
+    public partial class asociacionDeporteTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -664,7 +794,7 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public categoriaTableAdapter() {
+        public asociacionDeporteTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -761,36 +891,60 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "categoria";
-            tableMapping.ColumnMappings.Add("idCategoria", "idCategoria");
+            tableMapping.DataSetTable = "asociacionDeporte";
+            tableMapping.ColumnMappings.Add("fechaInicio", "fechaInicio");
+            tableMapping.ColumnMappings.Add("fechaFin", "fechaFin");
             tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.ColumnMappings.Add("Categoria", "Categoria");
+            tableMapping.ColumnMappings.Add("Estado", "Estado");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[categoria] WHERE (([idCategoria] = @Original_idCategoria) AND " +
-                "((@IsNull_nombre = 1 AND [nombre] IS NULL) OR ([nombre] = @Original_nombre)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[asociacionDeporte] WHERE (([idAsociacion] = @Original_idAsociacion) AND ((@IsNull_fechaInicio = 1 AND [fechaInicio] IS NULL) OR ([fechaInicio] = @Original_fechaInicio)) AND ((@IsNull_fechaFin = 1 AND [fechaFin] IS NULL) OR ([fechaFin] = @Original_fechaFin)) AND ((@IsNull_estado = 1 AND [estado] IS NULL) OR ([estado] = @Original_estado)) AND ((@IsNull_categoria = 1 AND [categoria] IS NULL) OR ([categoria] = @Original_categoria)) AND ((@IsNull_cuotaDeporte = 1 AND [cuotaDeporte] IS NULL) OR ([cuotaDeporte] = @Original_cuotaDeporte)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idCategoria", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCategoria", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idAsociacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idAsociacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fechaInicio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaInicio", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaInicio", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaInicio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fechaFin", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaFin", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaFin", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaFin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_categoria", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoria", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_categoria", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoria", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cuotaDeporte", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cuotaDeporte", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cuotaDeporte", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cuotaDeporte", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[categoria] ([nombre]) VALUES (@nombre);\r\nSELECT idCategoria, n" +
-                "ombre FROM categoria WHERE (idCategoria = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[asociacionDeporte] ([fechaInicio], [fechaFin], [estado], [categoria], [cuotaDeporte]) VALUES (@fechaInicio, @fechaFin, @estado, @categoria, @cuotaDeporte);
+SELECT idAsociacion, fechaInicio, fechaFin, estado, categoria, cuotaDeporte FROM asociacionDeporte WHERE (idAsociacion = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaInicio", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaInicio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFin", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaFin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@categoria", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cuotaDeporte", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cuotaDeporte", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[categoria] SET [nombre] = @nombre WHERE (([idCategoria] = @Original" +
-                "_idCategoria) AND ((@IsNull_nombre = 1 AND [nombre] IS NULL) OR ([nombre] = @Ori" +
-                "ginal_nombre)));\r\nSELECT idCategoria, nombre FROM categoria WHERE (idCategoria =" +
-                " @idCategoria)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[asociacionDeporte] SET [fechaInicio] = @fechaInicio, [fechaFin] = @fechaFin, [estado] = @estado, [categoria] = @categoria, [cuotaDeporte] = @cuotaDeporte WHERE (([idAsociacion] = @Original_idAsociacion) AND ((@IsNull_fechaInicio = 1 AND [fechaInicio] IS NULL) OR ([fechaInicio] = @Original_fechaInicio)) AND ((@IsNull_fechaFin = 1 AND [fechaFin] IS NULL) OR ([fechaFin] = @Original_fechaFin)) AND ((@IsNull_estado = 1 AND [estado] IS NULL) OR ([estado] = @Original_estado)) AND ((@IsNull_categoria = 1 AND [categoria] IS NULL) OR ([categoria] = @Original_categoria)) AND ((@IsNull_cuotaDeporte = 1 AND [cuotaDeporte] IS NULL) OR ([cuotaDeporte] = @Original_cuotaDeporte)));
+SELECT idAsociacion, fechaInicio, fechaFin, estado, categoria, cuotaDeporte FROM asociacionDeporte WHERE (idAsociacion = @idAsociacion)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idCategoria", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCategoria", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCategoria", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idCategoria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaInicio", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaInicio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFin", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaFin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@categoria", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cuotaDeporte", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cuotaDeporte", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idAsociacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idAsociacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fechaInicio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaInicio", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaInicio", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaInicio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fechaFin", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaFin", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaFin", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaFin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_categoria", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoria", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_categoria", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoria", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cuotaDeporte", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cuotaDeporte", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cuotaDeporte", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cuotaDeporte", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idAsociacion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idAsociacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -803,26 +957,27 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idCategoria, nombre FROM dbo.categoria";
+            this._commandCollection[0].CommandText = @"SELECT        deporte.nombre, asociacionDeporte.fechaInicio, asociacionDeporte.fechaFin, categoria.nombre AS Categoria, estadoAsDep.descripcion AS Estado
+FROM            socio RIGHT OUTER JOIN
+                         asociacionDeporte ON socio.asociacionDeporte = asociacionDeporte.idAsociacion RIGHT OUTER JOIN
+                         deporte LEFT OUTER JOIN
+                         categoria ON deporte.idDeporte = categoria.deporte ON asociacionDeporte.categoria = categoria.idCategoria RIGHT OUTER JOIN
+                         estadoAsDep ON asociacionDeporte.estado = estadoAsDep.idEAD
+WHERE        (socio.idSocio = @idSocio)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        idCategoria, nombre\r\nFROM            categoria\r\nWHERE        (cateS" +
-                "exo = @sexo) AND (deporte = @deporte)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sexo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cateSexo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@deporte", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "deporte", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idSocio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idSocio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DS_Categoria.categoriaDataTable dataTable) {
+        public virtual int Fill(DS_AsociacionDeporte.asociacionDeporteDataTable dataTable, int idSocio) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idSocio));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -834,9 +989,10 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DS_Categoria.categoriaDataTable GetData() {
+        public virtual DS_AsociacionDeporte.asociacionDeporteDataTable GetData(int idSocio) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DS_Categoria.categoriaDataTable dataTable = new DS_Categoria.categoriaDataTable();
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idSocio));
+            DS_AsociacionDeporte.asociacionDeporteDataTable dataTable = new DS_AsociacionDeporte.asociacionDeporteDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -844,40 +1000,15 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int DeporteXSexo(DS_Categoria.categoriaDataTable dataTable, global::System.Nullable<int> sexo, global::System.Nullable<int> deporte) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((sexo.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(sexo.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((deporte.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(deporte.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DS_Categoria.categoriaDataTable dataTable) {
+        public virtual int Update(DS_AsociacionDeporte.asociacionDeporteDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DS_Categoria dataSet) {
-            return this.Adapter.Update(dataSet, "categoria");
+        public virtual int Update(DS_AsociacionDeporte dataSet) {
+            return this.Adapter.Update(dataSet, "asociacionDeporte");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -899,15 +1030,47 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_idCategoria, string Original_nombre) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idCategoria));
-            if ((Original_nombre == null)) {
+        public virtual int Delete(int Original_idAsociacion, global::System.Nullable<global::System.DateTime> Original_fechaInicio, global::System.Nullable<global::System.DateTime> Original_fechaFin, global::System.Nullable<int> Original_estado, global::System.Nullable<int> Original_categoria, global::System.Nullable<int> Original_cuotaDeporte) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idAsociacion));
+            if ((Original_fechaInicio.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_fechaInicio.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
+            if ((Original_fechaFin.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_fechaFin.Value));
+            }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_nombre));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_estado.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_estado.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_categoria.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_categoria.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cuotaDeporte.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_cuotaDeporte.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -929,12 +1092,36 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string nombre) {
-            if ((nombre == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> fechaInicio, global::System.Nullable<global::System.DateTime> fechaFin, global::System.Nullable<int> estado, global::System.Nullable<int> categoria, global::System.Nullable<int> cuotaDeporte) {
+            if ((fechaInicio.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(fechaInicio.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(nombre));
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((fechaFin.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(fechaFin.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((estado.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(estado.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((categoria.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(categoria.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((cuotaDeporte.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(cuotaDeporte.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -956,23 +1143,79 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nombre, int Original_idCategoria, string Original_nombre, int idCategoria) {
-            if ((nombre == null)) {
+        public virtual int Update(global::System.Nullable<global::System.DateTime> fechaInicio, global::System.Nullable<global::System.DateTime> fechaFin, global::System.Nullable<int> estado, global::System.Nullable<int> categoria, global::System.Nullable<int> cuotaDeporte, int Original_idAsociacion, global::System.Nullable<global::System.DateTime> Original_fechaInicio, global::System.Nullable<global::System.DateTime> Original_fechaFin, global::System.Nullable<int> Original_estado, global::System.Nullable<int> Original_categoria, global::System.Nullable<int> Original_cuotaDeporte, int idAsociacion) {
+            if ((fechaInicio.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(fechaInicio.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(nombre));
+            if ((fechaFin.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(fechaFin.Value));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_idCategoria));
-            if ((Original_nombre == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((estado.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(estado.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((categoria.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(categoria.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_nombre));
+            if ((cuotaDeporte.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(cuotaDeporte.Value));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(idCategoria));
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_idAsociacion));
+            if ((Original_fechaInicio.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_fechaInicio.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_fechaFin.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_fechaFin.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_estado.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_estado.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_categoria.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_categoria.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cuotaDeporte.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_cuotaDeporte.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(idAsociacion));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -988,14 +1231,6 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nombre, int Original_idCategoria, string Original_nombre) {
-            return this.Update(nombre, Original_idCategoria, Original_nombre, Original_idCategoria);
-        }
     }
     
     /// <summary>
@@ -1010,7 +1245,7 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private categoriaTableAdapter _categoriaTableAdapter;
+        private asociacionDeporteTableAdapter _asociacionDeporteTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1032,12 +1267,12 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public categoriaTableAdapter categoriaTableAdapter {
+        public asociacionDeporteTableAdapter asociacionDeporteTableAdapter {
             get {
-                return this._categoriaTableAdapter;
+                return this._asociacionDeporteTableAdapter;
             }
             set {
-                this._categoriaTableAdapter = value;
+                this._asociacionDeporteTableAdapter = value;
             }
         }
         
@@ -1060,9 +1295,9 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._categoriaTableAdapter != null) 
-                            && (this._categoriaTableAdapter.Connection != null))) {
-                    return this._categoriaTableAdapter.Connection;
+                if (((this._asociacionDeporteTableAdapter != null) 
+                            && (this._asociacionDeporteTableAdapter.Connection != null))) {
+                    return this._asociacionDeporteTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1077,7 +1312,7 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._categoriaTableAdapter != null)) {
+                if ((this._asociacionDeporteTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1089,14 +1324,14 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(DS_Categoria dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DS_AsociacionDeporte dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._categoriaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.categoria.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._asociacionDeporteTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.asociacionDeporte.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._categoriaTableAdapter.Update(updatedRows));
+                    result = (result + this._asociacionDeporteTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1108,13 +1343,13 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(DS_Categoria dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DS_AsociacionDeporte dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._categoriaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.categoria.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._asociacionDeporteTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.asociacionDeporte.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._categoriaTableAdapter.Update(addedRows));
+                    result = (result + this._asociacionDeporteTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1126,13 +1361,13 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(DS_Categoria dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DS_AsociacionDeporte dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._categoriaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.categoria.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._asociacionDeporteTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.asociacionDeporte.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._categoriaTableAdapter.Update(deletedRows));
+                    result = (result + this._asociacionDeporteTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1168,15 +1403,15 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(DS_Categoria dataSet) {
+        public virtual int UpdateAll(DS_AsociacionDeporte dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._categoriaTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._categoriaTableAdapter.Connection) == false))) {
+            if (((this._asociacionDeporteTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._asociacionDeporteTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -1212,13 +1447,13 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._categoriaTableAdapter != null)) {
-                    revertConnections.Add(this._categoriaTableAdapter, this._categoriaTableAdapter.Connection);
-                    this._categoriaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._categoriaTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._categoriaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._categoriaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._categoriaTableAdapter.Adapter);
+                if ((this._asociacionDeporteTableAdapter != null)) {
+                    revertConnections.Add(this._asociacionDeporteTableAdapter, this._asociacionDeporteTableAdapter.Connection);
+                    this._asociacionDeporteTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._asociacionDeporteTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._asociacionDeporteTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._asociacionDeporteTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._asociacionDeporteTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1279,9 +1514,9 @@ namespace KenosTesis.DS_CategoriaTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._categoriaTableAdapter != null)) {
-                    this._categoriaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._categoriaTableAdapter]));
-                    this._categoriaTableAdapter.Transaction = null;
+                if ((this._asociacionDeporteTableAdapter != null)) {
+                    this._asociacionDeporteTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._asociacionDeporteTableAdapter]));
+                    this._asociacionDeporteTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

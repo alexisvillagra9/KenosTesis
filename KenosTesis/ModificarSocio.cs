@@ -25,7 +25,6 @@ namespace KenosTesis
         private DataSet datoObj;
         private void ModificarSocio_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet11.sexo' Puede moverla o quitarla según sea necesario.
             this.MaximizeBox = false;
             // TODO: esta línea de código carga datos en la tabla 'pilarSportClubDataSet2.sexo' Puede moverla o quitarla según sea necesario.
             this.sexoTableAdapter.Fill(this.pilarSportClubDataSet2.sexo);
@@ -118,6 +117,7 @@ namespace KenosTesis
         {
             AltaAsociacionDeporte aadep = new AltaAsociacionDeporte();
             AddOwnedForm(aadep);
+            aadep.label1.Text = comboBox1.SelectedValue.ToString();
             aadep.Show();
         }
 
@@ -228,7 +228,7 @@ namespace KenosTesis
         {
             estadoSocio.Text = "- - - - - -";
             ngrupo.Text = "- - -";
-            nsocio.Text ="";
+            nsocio.Text = "";
             ndni.Text = "";
             apellido.Text = "";
             textBox3.Text = "";
@@ -242,7 +242,7 @@ namespace KenosTesis
             panel1.Enabled = false;
             panel2.Enabled = false;
             panel3.Enabled = false;
-            nsocio.Enabled= true;
+            nsocio.Enabled = true;
             ndni.Enabled = true;
             apellido.Enabled = true;
             button9.Visible = false;
@@ -316,13 +316,13 @@ namespace KenosTesis
             {
                 estado = 0;
             }
-            SqlCommand modifica2 = new SqlCommand("update socio set estado=@est2 where idSocio=@idest", conexion);
+            SqlCommand modifica2 = new SqlCommand("update socio set estado=@est2 where idSocio=@idSocio", conexion);
             adaptador.UpdateCommand = modifica2;
             adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@est2", SqlDbType.Int));
-            adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@idest", SqlDbType.Int));
+            adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@idSocio", SqlDbType.Int));
             conexion.Open();
             adaptador.UpdateCommand.Parameters["@est2"].Value = estado;
-            adaptador.UpdateCommand.Parameters["@idest"].Value = nsocio.Text;
+            adaptador.UpdateCommand.Parameters["@idSocio"].Value = nsocio.Text;
             adaptador.UpdateCommand.ExecuteNonQuery();
             conexion.Close();
             Rellenar(Int32.Parse(nsocio.Text));
@@ -331,7 +331,42 @@ namespace KenosTesis
 
         private void button5_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < dataGridView2.Rows.Count; i++)
+            {
+                if (dataGridView2.Rows[i].Cells[0].Value == null)
+                {
 
+                }
+                else
+                {
+                    if (dataGridView2.Rows[i].Cells[0].Value.Equals(true))
+                    {
+                        SqlCommand modifica2 = new SqlCommand("update asociacionDeporte set estado=@est,fechaFin=@ff where idAsociacion=@idAso", conexion);
+                        adaptador.UpdateCommand = modifica2;
+                        adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@est", SqlDbType.Int));
+                        adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@idAso", SqlDbType.Int));
+                        adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@ff", SqlDbType.Date));
+                        conexion.Open();
+                        adaptador.UpdateCommand.Parameters["@est"].Value = 0;
+                        adaptador.UpdateCommand.Parameters["@idAso"].Value = dataGridView2.Rows[i].Cells[1].Value;
+                        adaptador.UpdateCommand.Parameters["@ff"].Value = DateTime.Today;
+                        adaptador.UpdateCommand.ExecuteNonQuery();
+                        conexion.Close();
+                        asociacionDeporteTableAdapter.Fill(pilarSportClubDataSet27.asociacionDeporte, int.Parse(nsocio.Text));
+                    }
+                }
+            }
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int fila = dataGridView2.CurrentCellAddress.X;
+            int columna = dataGridView2.CurrentCellAddress.Y;
+            for (int i = 0; i < dataGridView2.Rows.Count; i++)
+            {
+                dataGridView2.Rows[i].Cells[0].Value = false;
+            }
+            dataGridView2.Rows[columna].Cells[0].Value = true;
         }
     }
 }
